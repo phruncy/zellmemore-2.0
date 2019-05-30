@@ -9,7 +9,7 @@ import { AutomatonService } from 'src/app/services/automaton.service';
 export class StatusDisplayComponent implements OnInit {
 
     @Input() cellnumber: number;
-    constructor(private automaton: AutomatonService) { }
+    constructor(public automaton: AutomatonService) { }
 
     ngOnInit() {
         this.cellnumber = this.automaton.cellnumber;

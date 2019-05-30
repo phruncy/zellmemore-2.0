@@ -22,12 +22,12 @@ export class TutorialAnimationComponent implements OnInit {
 
     @ViewChild('entry', {read: ViewContainerRef}) entry: ViewContainerRef;
 
-    private faAngleDown = faAngleDown;
-    private faAngleUp = faAngleUp;
-    private _activeStepDescription = 0;
+    faAngleDown = faAngleDown;
+    faAngleUp = faAngleUp;
+    public _activeStepDescription = 0;
     private _tutorialStep: number;
-    private _currentTotalSteps = 0;
-    private steps: any[];
+    public _currentTotalSteps = 0;
+    public steps: any[];
 
     constructor() {}
 

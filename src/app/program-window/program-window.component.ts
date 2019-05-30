@@ -23,11 +23,11 @@ import {customTooltipDefaults } from '../utils/customTooltipDefaults';
 export class ProgramWindowComponent {
 
     private _selectionDisplayed = false;
-    private faTimes = faTimes;
-    private faPlay = faPlay;
-    private faUndo = faUndo;
-    private faHome = faHome;
-    private faAngleLeft = faAngleLeft;
+    faTimes = faTimes;
+    faPlay = faPlay;
+    faUndo = faUndo;
+    faHome = faHome;
+    faAngleLeft = faAngleLeft;
 
     constructor(
         private route: ActivatedRoute,

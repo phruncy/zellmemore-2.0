@@ -9,9 +9,9 @@ import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 })
 export class AutomatonControllerComponent implements OnInit {
 
-    private faAngleDown = faAngleDown;
+    faAngleDown = faAngleDown;
 
-    constructor(private automaton: AutomatonService) { }
+    constructor(public automaton: AutomatonService) { }
 
     ngOnInit() {}
 }

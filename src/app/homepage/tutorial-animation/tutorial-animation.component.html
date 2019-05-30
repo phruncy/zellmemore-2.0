@@ -1,6 +1,6 @@
 <div class="fucking-container">
         <div class="animation-container" cdkScrollable>
-                <div *ngIf="_tutorialStep === 0"
+                <div *ngIf="tutorialStep === 0"
                         class="step-element">
                         <div class="h-container">
                                 <div class="text">
@@ -11,43 +11,43 @@
                         </div>
                 </div>
                 <div 
-                        *ngIf="_tutorialStep === 1"
+                        *ngIf="tutorialStep === 1"
                         class="step-element-wrapper"
                         [@slideInOut]>
                         <app-step01 (completion)="addStep()" [activeDescription]="_activeStepDescription"></app-step01>
                 </div>
                 <div
-                        *ngIf="_tutorialStep === 2"
+                        *ngIf="tutorialStep === 2"
                         class="step-element-wrapper"
                         [@slideInOut]>
                         <app-step02 (completion)="addStep()" [activeDescription]="_activeStepDescription"></app-step02>
                 </div>
                 <div
-                        *ngIf="_tutorialStep === 3"
+                        *ngIf="tutorialStep === 3"
                         class="step-element-wrapper"
                         [@slideInOut]>
                         <app-step04 (completion)="addStep()" [activeDescription]="_activeStepDescription"></app-step04>
                 </div>
                 <div
-                        *ngIf="_tutorialStep === 4"
+                        *ngIf="tutorialStep === 4"
                         class="step-element-wrapper"
                         [@slideInOut]>
                         <app-step03 (completion)="addStep()" [activeDescription]="_activeStepDescription"></app-step03>
                 </div>
                 <div
-                        *ngIf="_tutorialStep === 5"
+                        *ngIf="tutorialStep === 5"
                         class="step-element-wrapper"
                         [@slideInOut]>
                         <app-step05 (completion)="addStep()" [activeDescription]="_activeStepDescription"></app-step05>
                 </div>
                 <div 
-                        *ngIf="_tutorialStep === 6"
+                        *ngIf="tutorialStep === 6"
                         class="step-element-wrapper"
                         [@slideInOut]>
                         <app-step06 (completion)="addStep()" [activeDescription]="_activeStepDescription"></app-step06>
                 </div>
                 <div
-                        *ngIf="_tutorialStep === 7"
+                        *ngIf="tutorialStep === 7"
                         class="step-element-wrapper"
                         [@slideInOut]>
                         <app-step-final [activeDescription]="_activeStepDescription"></app-step-final>
@@ -55,14 +55,14 @@
         </div>
         <div class="step-control-wrapper">
                 <app-tutorial-step-control 
-                                [_activeStep]="_tutorialStep" 
+                                [_activeStep]="tutorialStep" 
                                 (activeStepChange)="tutorialStep = $event"
                                 [steps]="steps"
                                 [unlockedSteps]="_currentTotalSteps">
                 </app-tutorial-step-control>
         </div>
         <div class="direction-control">
-                <div class="btn-wrapper" *ngIf="_tutorialStep !== 0">
+                <div class="btn-wrapper" *ngIf="tutorialStep !== 0">
                         <button
                                 mat-stroked-button
                                 color="accent"
@@ -70,7 +70,7 @@
                                 <fa-icon [icon]="faAngleUp"></fa-icon>
                         </button>
                 </div>
-                <div class="btn-wrapper" *ngIf="_tutorialStep !== steps.length">
+                <div class="btn-wrapper" *ngIf="tutorialStep !== steps.length">
                         <button 
                                 mat-stroked-button
                                 color="accent"

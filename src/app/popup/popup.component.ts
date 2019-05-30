@@ -8,7 +8,7 @@ import { MAT_SNACK_BAR_DATA } from '@angular/material';
 })
 export class PopupComponent implements OnInit {
 
-  private message: String;
+  public message: String;
 
   constructor(@Inject(MAT_SNACK_BAR_DATA) public data: any) {
       this.message = data;

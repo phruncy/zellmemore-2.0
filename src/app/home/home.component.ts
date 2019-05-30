@@ -10,7 +10,7 @@ import { faArrowCircleRight, faChevronRight } from '@fortawesome/free-solid-svg-
 
 export class HomeComponent implements OnInit {
 
-    private faArrowAltCircleRight = faChevronRight;
+    faArrowAltCircleRight = faChevronRight;
     
     constructor() { }
 

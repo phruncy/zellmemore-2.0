@@ -20,7 +20,7 @@
                 matTooltip="show / hide">
                 <div class="icon settings-label">
                         settings 
-                        <fa-icon [icon]="faAngleLeft" class="settings icon" [class.active]="_controllerDisplayed">    
+                        <fa-icon [icon]="faAngleLeft" class="settings icon" [class.active]="controllerDisplayed">    
                         </fa-icon>
                 </div>
         </button>
@@ -32,6 +32,6 @@
 <div class="controller-wrapper">
         <app-automaton-controller 
                 class="controller" 
-                [class.active]="_controllerDisplayed">
+                [class.active]="controllerDisplayed">
         </app-automaton-controller>
 </div>

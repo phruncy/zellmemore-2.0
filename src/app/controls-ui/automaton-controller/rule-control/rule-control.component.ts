@@ -15,9 +15,9 @@ export class RuleControlComponent implements OnInit {
     @Input() decimal;
     @ViewChild('popupContainer') private popupContainer: ViewContainerRef;
     private _boxesDisplayed = false;
-    private faAngleLeft = faAngleLeft;
+    faAngleLeft = faAngleLeft;
 
-    private BOXES = [
+    public BOXES = [
         { id: '111', value: 7, iconValues: [1, 1, 1]},
         { id: '110', value: 6, iconValues: [1, 1, 0]},
         { id: '101', value: 5, iconValues: [1, 0, 1]},
@@ -33,12 +33,16 @@ export class RuleControlComponent implements OnInit {
         private converter: RuleConverterService,
         private messenger: MessengerService) { }
 
+    get boxesDisplayed(): boolean {
+        return this._boxesDisplayed;
+    }
+    
     ngOnInit() {
-        this.automaton.ready$.subscribe(
-            () => {
-                this.decimal = this.converter.binaryToDecimal(this.automaton.ruleset);
-            }
-        );
+    this.automaton.ready$.subscribe(
+        () => {
+            this.decimal = this.converter.binaryToDecimal(this.automaton.ruleset);
+        }
+    );
     }
 
   /* sets the digit in the ruleset at the given index to active or inactive, depending on the checkbox state */

@@ -9,14 +9,18 @@ import { faPlay, faUndo, faAngleLeft, faPause, faHome } from '@fortawesome/free-
 })
 export class TopbarComponent implements OnInit {
 
-    private faPlay = faPlay;
-    private faPause = faPause;
-    private faUndo = faUndo;
-    private faAngleLeft = faAngleLeft;
+    faPlay = faPlay;
+    faPause = faPause;
+    faUndo = faUndo;
+    faAngleLeft = faAngleLeft;
     private _controllerDisplayed: boolean;
 
-    constructor(private automaton: AutomatonService) { }
+    constructor(public automaton: AutomatonService) { }
 
+    get controllerDisplayed(): boolean {
+        return this._controllerDisplayed;
+    }
+    
     ngOnInit() {
         this._controllerDisplayed = window.innerWidth > 420 ? true : false;
     }

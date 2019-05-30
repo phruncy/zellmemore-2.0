@@ -12,7 +12,19 @@ export class CellsControlComponent implements OnInit {
     private _cellsMax = 300;
     private _step = 10;
 
-  constructor(private automaton: AutomatonService) { }
+  constructor(public automaton: AutomatonService) { }
+
+    get cellsMin(): number {
+        return this._cellsMin;
+    }
+
+    get cellsMax(): number {
+        return this._cellsMax;
+    }
+
+    get step(): number {
+        return this._step;
+    }
 
   ngOnInit() {}
 }

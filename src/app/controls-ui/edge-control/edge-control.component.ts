@@ -10,7 +10,7 @@ export class EdgeControlComponent implements OnInit {
 
     private labeltext: String;
 
-    constructor(private automaton: AutomatonService) { }
+    constructor(public automaton: AutomatonService) { }
 
     ngOnInit() {
         this.automaton.ready$.subscribe(

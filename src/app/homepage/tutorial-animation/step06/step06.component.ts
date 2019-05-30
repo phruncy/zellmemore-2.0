@@ -25,10 +25,10 @@ export class Step06Component extends Step implements OnInit {
     faQuestion = faQuestion;
     private _icon: any;
 
-    private cells = [
+    public cells = [
         {state : 'active'},
     ];
-    private edges = [
+    public edges = [
         {state: 'inactive'},
         {state: 'active'}
     ];

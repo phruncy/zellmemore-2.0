@@ -8,7 +8,7 @@ import { AutomatonService } from 'src/app/services/automaton.service';
 })
 export class StateControlComponent implements OnInit {
 
-  constructor(private automaton: AutomatonService) { }
+  constructor(public automaton: AutomatonService) { }
 
   ngOnInit() {
   }

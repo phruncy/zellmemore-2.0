@@ -23,12 +23,12 @@ export class WidgetFrameComponent implements OnInit {
 
     @ViewChild('entry', {read: ViewContainerRef}) entry: ViewContainerRef;
     @Output() clickAnimated = new EventEmitter();
-    private faAngleDown = faAngleDown;
-    private faPlusCircle = faPlusCircle;
+    faAngleDown = faAngleDown;
+    faPlusCircle = faPlusCircle;
 
     constructor(
         private visualizationService: VisualizationService,
-        private sizeService: SizeService,
+        public sizeService: SizeService,
         private resolver: ComponentFactoryResolver,
         private elRef: ElementRef,
         private cd: ChangeDetectorRef,

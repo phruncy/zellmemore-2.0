@@ -52,9 +52,9 @@ export class WidgetComponent implements OnInit, OnDestroy {
     constructor(
             private visService: VisualizationService,
             private details: VisualizationDetailService,
-            private sizeService: SizeService,
+            public sizeService: SizeService,
             private resolver: ComponentFactoryResolver,
-            private automaton: AutomatonService,
+            public automaton: AutomatonService,
         ) {}
 
     set ref(ref: any)
